@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulário</title>
+  </head>
+
+
+  <body>
+    
+        <h3>Formulário de Cadastro</h3>
+        <input type="text" id='Nome' name= "Nome" placeholder = "Insira um nome"/>
+        <input type="password" id="Primeiro" name="Senha" placeholder="Insira uma senha"/>
+        <input type="password" id="Segunda" name="Pass" placeholder="Confirme sua senha"/>
+        <input type="button" id="Enviar" title= "Enviar" onclick="Enviar()">
+    
+    <script>
+
+  
+        
+
+        function Enviar()
+        {
+            var nome=document.getElementById('Nome');
+            var pessoa= nome.value;
+
+            var senha=document.getElementById('Primeiro');
+            var sinc= senha.value;
+
+            var pass=document.getElementById('Segunda');
+            sincr=pass.value;
+
+            if(sinc != sincr)
+            {
+                alert("AS SENHAS NAO CORRESPONDEM");
+                
+            }
+            if(sinc == sincr)
+            {
+                alert("Obrigado por se cadastrar " +pessoa);
+                
+            }
+        }
+    </script>
+  </body>
+</html>
