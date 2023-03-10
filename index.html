@@ -3,55 +3,17 @@
     <meta charset="utf-8">
     <title>Formulário</title>
   </head>
-  
-  <style>
-    body
-    {
-      background-color: #6467FA;
-      
-    }
-    .Nome
-    {
-      margin-left: 40%;
-      margin-right: 60%;
-      
-    }
-    .senha
-    {
-      margin-left: 40%;
-      margin-right: 60%;
-    }
-    .confirma
-    {
-      margin-left: 40%;
-      margin-right: 60%;
-    }
-    .botao
-    {
-      margin-left: 40%;
-      margin-right: 60%;
-    }
-    h3
-    {
-      margin-left: 40%;
-      margin-right: 60%;
-      align-content: center;
-      margin-top: 15%;
-    }
-    .placeholder
-    {
-      color: blue;
-    }
-  </style>
 
   <body>
-    <form>
     
-        <h3>Formulário de Cadastro</h3>
-        <div class="Nome"><input type="text" id='Nome' name= "Nome" placeholder = "Insira um nome"/></div>
-        <div class="senha"><input type="password" id="Primeiro" name="Senha" placeholder="Insira uma senha"/></div>
-        <div class="confirma"><input type="password" id="Segunda" name="Pass" placeholder="Confirme sua senha"/></div>
-        <div class="botao"><input type="button" id="Enviar" value= "Enviar" onclick="Enviar()"></div>
+        <h3>Cadastro</h3>
+        <input type="text" id='Nome' name= "Nome" placeholder = "Insira um nome"/>
+    </br>
+        <input type="password" id="Primeiro" name="Senha" placeholder="Insira uma senha"/>
+    </br>
+        <input type="password" id="Segunda" name="Pass" placeholder="Confirme sua senha"/>
+    </br>    
+       <input type="button" id="Enviar" value= "Enviar" onclick="Enviar()">
     </form>
     
     <script>
@@ -65,17 +27,26 @@
 
             var pass=document.getElementById('Segunda');
             sincr=pass.value;
-
-            if(sinc != sincr)
+ 
+           
+            if (sinc != sincr)
             {
                 alert("AS SENHAS NAO CORRESPONDEM");
                 
             }
-            if(sinc == sincr)
+            do
             {
-                alert("Obrigado por se cadastrar " +pessoa);
-                
+                (sinc.value == "");
+                (sincr.value == "");
+                (pessoa.value == "");
             }
+            while (alert("PREENCHA OS DADOS!!"));
+
+    
+               if (sinc.value == sincr.value)
+               {
+                alert("Obrigado por se cadastrar " +pessoa);
+               }
         }
     </script>
   </body>
